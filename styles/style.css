@@ -90,7 +90,7 @@ Audio {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 65vh; /* Menggunakan tinggi viewport untuk kotak di tengah layar */;
+  height: 40vh; /* Menggunakan tinggi viewport untuk kotak di tengah layar */;
   padding: 10px;
 }
 
@@ -99,7 +99,7 @@ Audio {
   flex-direction: column;
   justify-content: center; /* Mengatur teks di tengah vertikal */
   align-items: center; /* Mengatur teks di tengah horizontal */
-  width: 600px;
+  width: 700px;
   background-color: #f1f1f1;
   border: 1px solid #ddd;
   border-radius: 5px;
@@ -108,8 +108,22 @@ Audio {
   text-align: center;
 }
 
+.video-box-2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Mengatur teks di tengah vertikal */
+  align-items: center; /* Mengatur teks di tengah horizontal */
+  width: 700px;
+  background-color: transparent;
+  /* border: 1px solid; */
+  border-radius: 5px;
+  padding: 10px;
+  font-family: 'Didot', serif;
+  text-align: center;
+}
+
 .video-box h5 {
-  margin: 10px 0;
+  margin: 5px 0;
   font-size: 18px;
   font-weight: bold;
 }
@@ -118,6 +132,20 @@ Audio {
   margin: 0;
   font-size: 17px;
   color: #666;
+  text-align: justify;
+  line-height: 1.5;
+}
+
+.video-box-2 h5 {
+  margin: 5px 0;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.video-box-2 p-1 {
+  margin: 0;
+  font-size: 17px;
+  /* color: black; */
   text-align: justify;
   line-height: 1.5;
 }
@@ -152,12 +180,33 @@ h3 {
   font-weight: lighter;
 }
 
+h5 {
+  text-align: center;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  font-family: 'Perpetua', serif;
+  font-size: 20px;
+  line-height: 1.5;
+  font-weight: lighter;
+}
+
 p {
   text-align: center;
   font-size: 15px;
   margin-top: 10px;
   margin-bottom: 50px;
-  color: rgb(180, 180, 189);
+  color: rgb(180, 174, 174);
+  font-family: 'Geneva', sans-serif;
+  font-size: 20 px;
+  line-height: 1.5;
+}
+
+p-1 {
+  text-align: center;
+  font-size: 15px;
+  margin-top: 10px;
+  margin-bottom: 50px;
+  /* color: rgb(180, 174, 174); */
   font-family: 'Geneva', sans-serif;
   font-size: 20 px;
   line-height: 1.5;
@@ -165,6 +214,15 @@ p {
 
 @media only screen and (max-width: 896px) {
   p {
+    font-size: 12px;
+    padding: 10px;
+    margin-bottom: 26px;
+    margin-top: 5px;
+  }
+}
+
+@media only screen and (max-width: 896px) {
+  p-1 {
     font-size: 12px;
     padding: 10px;
     margin-bottom: 26px;
@@ -204,6 +262,15 @@ p {
   }
 }
 
+@media only screen and (max-width: 896px) {
+  h5 {
+    font-size: 14px;
+    line-height: 1.2;
+    margin-top: 10px;
+    /* margin-bottom:5px; */
+  }
+}
+
 @media only screen and (max-width: 414px) {
   #slide-container {
     height: 200px;
@@ -218,15 +285,34 @@ p {
 
 @media only screen and (max-width: 414px) {
   .video-container {
-    margin: 20px;
+    margin: 70px;
     margin-bottom: 30px;
   }
   .video-box {
     flex-direction: column;
     height: auto;
     width: 90%;
+
   }
   .video-box p{
+    max-width: 100%;
+    height: auto;
+    font-size: 15px;
+
+}
+
+@media only screen and (max-width: 414px) {
+  .video-container {
+    margin: 70px;
+    margin-bottom: 30px;
+  }
+  .video-box-2 {
+    flex-direction: column;
+    height: auto;
+    width: 90%;
+
+  }
+  .video-box-2 p-1{
     max-width: 100%;
     height: auto;
     font-size: 15px;
